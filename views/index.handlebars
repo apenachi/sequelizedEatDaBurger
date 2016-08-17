@@ -1,0 +1,43 @@
+<div class="row text-center">
+	<h1 class="span12">Eat Da Burger ..!!</h1>
+	<img src="/assets/img/eatdaburger.jpg" alt="Da Burger">
+</div>
+
+<div class="row">
+
+	<div class="col-sm-6 text-right">
+		{{#each rows}}
+		{{#unless this.devoured}}
+		<h5 class="col-sm-9">{{this.burger_name}} <img src="/assets/img/eatdaburger.jpg" alt="Da Burger" height="35" width="30"></h5>
+		<form class="col-sm-3" action="/burger?_method=PUT" method="POST" class="button-size">
+			<input type="hidden" name="id" value="{{this.Id}}">
+			<h6><button class="btn btn-xs btn-info"	type="submit">Devour it!</button></h6>
+		</form>
+		{{/unless}}
+		{{/each}}
+	</div>
+
+	<div class="col-sm-6">
+	{{#each rows}}
+	{{#if this.devoured}}
+		<h5 class="col-sm-8">{{this.burger_name}}<img src="/assets/img/eatdaburgerbitten.jpg" alt="Da Burger Eaten" height="35" width="30"></h5>
+		<form class="col-sm-4" action="/burger?_method=DELETE" method="POST" class="button-size">
+			<input type="hidden" name="id" value="{{this.Id}}">
+			<h6 class="text-left"><button class="btn btn-xs btn-danger" type="submit"><span class="glyphicon glyphicon-trash"></span></button></h6>
+		</form>
+	{{/if}}
+	{{/each}}			
+	</div>
+
+</div>
+
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3">
+		<form method="POST" action="/burger">
+			<div class="form-group">
+				<textarea class="form-control" id="burger" name="burger"></textarea>
+			</div>
+			<button class="form-control btn btn-lg btn-success" type="submit">Add Burger</button>
+		</form>
+	</div>
+</div>
