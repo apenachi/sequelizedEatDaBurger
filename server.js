@@ -27,17 +27,6 @@ app.set('view engine', 'handlebars');
 
 controller(app);
 
-// app.get('/', function(req, res) {
-// 	burgersController.index(req, res);
-// });
-
-// app.post('/burger', function(req, res) {
-// 	burgersController.post(req, res);
-// });
-
-// app.put('/burger', function(req, res) {
-// 	burgersController.put(req, res);
-// })
 
 
 app.listen(app.get('port'), function() {
