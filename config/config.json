@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "apenachi",
+    "password": "Octubre=11",
+    "database": "burgers_db",
+    "host": "www.db4free.net",
     "dialect": "mysql"
   }
 }

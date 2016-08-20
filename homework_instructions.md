@@ -42,7 +42,7 @@ Put in your best efforts to complete one of these three challenge tiers:
 #### Tier 2: Migrated! (Moderate to Hard)
 
 
-<!-- [AYPMacPro]$:sequelize seed:create --name burge-seed -->
+<!-- [AYPMacPro]$:sequelize seed:create --name burger-seed -->
 <!-- [AYPMacPro]$:sequelize db:seed:all -->
 
 <!-- [aypmacpro]$:sequelize migration:create --name 'add-five-burgers' -->
