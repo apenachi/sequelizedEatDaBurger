@@ -10,15 +10,6 @@ sequelizeConnection.query('SET FOREIGN_KEY_CHECKS = 0')
 	return sequelizeConnection.sync({force:false})
 })
 
-.then(function(){
-	models.Burger.create(
-		{
-			burger_name: 'sequelize eat da burger',
-			devoured: 0
-		}
-	)
-});
-
 var burgers_controllers = function(app) {
 	app.get('/', function(req, res) {
 		models.Burger.findAll({})
