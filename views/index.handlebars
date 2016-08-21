@@ -5,19 +5,22 @@
 
 <div class="row">
 
-	<div class="col-sm-6 text-right">
+	<div class="col-sm-7">
 		{{#each rows}}
 		{{#unless this.devoured}}
-		<h5 class="col-sm-9">{{this.burger_name}} <img src="/assets/img/eatdaburger.jpg" alt="Da Burger" height="35" width="30"></h5>
-		<form class="col-sm-3" action="/burger?_method=PUT" method="POST" class="button-size">
+		<h5 class="col-sm-8 text-right">{{this.burger_name}} <img src="/assets/img/eatdaburger.jpg" alt="Da Burger" height="35" width="30"></h5>
+		<form class="col-sm-4 text-center" action="/burger?_method=PUT" method="POST" class="button-size">
 			<input type="hidden" name="id" value="{{this.id}}">
-			<h6><button class="btn btn-xs btn-info"	type="submit">Devour it!</button></h6>
+			<h6 class="col-sm-6">
+				<input type="text" name="devourer" placeholder="devourer">
+				<button class="btn btn-xs btn-info"	type="submit">Devour it!</button>
+			</h6>
 		</form>
 		{{/unless}}
 		{{/each}}
 	</div>
 
-	<div class="col-sm-6">
+	<div class="col-sm-5">
 	{{#each rows}}
 	{{#if this.devoured}}
 		<h5 class="col-sm-8">{{this.burger_name}}<img src="/assets/img/eatdaburgerbitten.jpg" alt="Da Burger Eaten" height="35" width="30"></h5>

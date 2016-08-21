@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "apenachi",
-    "password": "Octubre=11",
+    "password": "ask-me",
     "database": "burgers_db",
     "host": "www.db4free.net",
     "dialect": "mysql"
@@ -15,7 +15,7 @@
   },
   "production": {
     "username": "apenachi",
-    "password": "Octubre=11",
+    "password": "ask-me",
     "database": "burgers_db",
     "host": "www.db4free.net",
     "dialect": "mysql"
